@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+	<title>Bucket-List App | My Bucket-Lists</title>
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/style.min.css" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+</head>
+<body>
+	<div id="page-container" class="page-without-sidebar page-header-fixed">
+		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+			<!-- begin container-fluid -->
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="bucketlists.html" class="navbar-brand"><span class="navbar-logo"></span>Bucket List App</a>
+				</div>				
+				<!-- logout button -->
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown navbar-user">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">							 
+							<span class="hidden-xs">Logout</span></b>
+						</a>
+					</li>
+				</ul>
+				<!-- end logout button -->
+			</div>
+			<!-- end container-fluid -->
+		</div>		
+
+		<!-- begin #content -->
+		<div id="content" class="container">
+			<h1 class="page-header"></h1>			
+			<div class="panel panel-inverse">
+			    <div class="panel-heading">
+					<div class="panel-heading-btn">
+						<a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">New Bucket-List</a>
+					</div>
+			        <h2 class="panel-title">My Bucket Lists</h2>
+			    </div>
+				<!-- new bucket list -->
+				<div class="modal fade" id="modal-dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h4 class="modal-title">New Bucket-List</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-horizontal" action="/" method="POST">
+									<fieldset>
+										<div class="form-group">
+											<div class="col-md-12">
+												<input type="email" class="form-control" placeholder="Bucket List Name" />
+											</div>
+										</div>                                 
+									</fieldset>
+                            	</form>
+							 </div>
+							 <div class="modal-footer">
+								<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+								<a href="javascript:;" class="btn btn-sm btn-success">Add Bucket-List</a>
+							 </div>
+						   </div>
+						</div>
+					</div>
+					<!-- end of new bucket modal -->
+
+			    <div class="panel-body">
+					<!-- table showing all bucket lists -->
+                        <div class="panel-body">
+							<div class="table-responsive">
+								<table id="data-table" class="table table-striped table-bordered" width="100%">
+								<colgroup>
+									<col span="1" style="width: 10%;">
+									<col span="1" style="width: 70%;">
+                                    <col span="1" style="width: 10%;">
+									<col span="1" style="width: 10%;">
+								</colgroup>
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Name</th>
+											<th>Edit</th>
+											<th>Delete</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class='clickable-row' data-href='google.com'>
+											<td>1</td>
+											<td><a href = "tasks.html">Bucket-List 1</a></td>
+											<td class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal1"><span class="glyphicon glyphicon-edit"></span></button> </td>
+											<td class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-remove"></span></button> </td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td><a href = "tasks.html">Bucket-List 2</td>
+											<td class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal1"><span class="glyphicon glyphicon-edit"></span></button> </td>
+											<td class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-remove"></span></button> </td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td><a href = "tasks.html">Bucket-List 3</td>
+											<td class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal1"><span class="glyphicon glyphicon-edit"></span></button> </td>
+											<td class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-remove"></span></button> </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- end of all bucket lists table -->
+
+						<!-- Modal For Editing a bucket list -->
+						<div class="modal fade" id="modal1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h4 class="modal-title">Edit Bucket List</h4>
+									</div>
+									<div class="modal-body">
+										<form class="form-horizontal" action="/" method="POST">
+										<fieldset>
+											<div class="form-group">
+												<div class="col-md-12">
+													<input type="email" class="form-control" placeholder="Bucket List Name" />
+												</div>
+											</div>                                 		
+										</fieldset>
+									</form>
+									</div>
+									<div class="modal-footer">
+										<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+										<a href="javascript:;" class="btn btn-sm btn-success">Edit Bucket List</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End of edit task modal -->
+						
+						<!-- Modal For Removing a bucket list confirmation -->
+						<div class="modal fade" id="modal2">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h4 class="modal-title">Remove Bucket List</h4>
+									</div>
+									<div class="modal-body">
+										<h5>Are you sure to remove this bucket list?
+									</div>
+									<div class="modal-footer">
+										<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+										<a href="javascript:;" class="btn btn-sm btn-success">Remove Bucket</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End of remove bucket list confirmation modal -->
+					</div>
+                    <!-- end panel -->
+			        </p>
+			    </div>
+			</div>
+		</div>
+		<!-- end #content -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+</body>
+</html>
