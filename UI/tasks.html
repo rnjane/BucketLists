@@ -36,8 +36,34 @@
 					</div>
 			        <h2 class="panel-title">Tasks</h2>
 			    </div>
+				<!-- new task modal -->
+				<div class="modal fade" id="modal-dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h4 class="modal-title">New Task</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-horizontal" action="/" method="POST">
+									<fieldset>
+										<div class="form-group">
+											<div class="col-md-12">
+												<input type="email" class="form-control" placeholder="Enter Task" />
+											</div>
+										</div>                                 
+									</fieldset>
+                            	</form>
+							</div>
+								<div class="modal-footer">
+									<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+									<a href="javascript:;" class="btn btn-sm btn-success">Add Task</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- end new task modal -->
 				
-
 			    <div class="panel-body">
 					<!-- all tasks table -->
                         <div class="panel-body">
@@ -87,7 +113,54 @@
 						</div>
 						<!-- end of all tasks table -->
 
+						<!-- Modal For Editing a Task -->
+						<div class="modal fade" id="modal1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h4 class="modal-title">Edit Task</h4>
+									</div>
+									<div class="modal-body">
+										<form class="form-horizontal" action="/" method="POST">
+										<fieldset>
+											<div class="form-group">
+												<div class="col-md-12">
+													<input type="email" class="form-control" placeholder="Task Name" />
+												</div>
+											</div>                                 
+											
+										</fieldset>
+									</form>
+									</div>
+									<div class="modal-footer">
+										<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+										<a href="javascript:;" class="btn btn-sm btn-success">Edit Task</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End of edit task modal -->
 						
+						<!-- Modal For Removing a task confirmation -->
+						<div class="modal fade" id="modal2">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h4 class="modal-title">Remove Task</h4>
+									</div>
+									<div class="modal-body">
+										<h5>Are you sure to remove task?
+									</div>
+									<div class="modal-footer">
+										<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+										<a href="javascript:;" class="btn btn-sm btn-success">Remove Task</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End of remove task confirmation modal -->
 						
 					</div>
 			        </p>
