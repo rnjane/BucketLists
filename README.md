@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/rnjane/BucketLists.svg?branch=master)](https://travis-ci.org/rnjane/BucketLists)
 # Introduction
 
 * **Bucket Lists App** is a Flask Powered Bucket Lists App. Bucket List app helps users record things they want to achieve or experience before reaching a certain age.
