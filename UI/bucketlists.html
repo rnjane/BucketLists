@@ -39,7 +39,33 @@
 					</div>
 			        <h2 class="panel-title">My Bucket Lists</h2>
 			    </div>
-				
+				<!-- new bucket list -->
+				<div class="modal fade" id="modal-dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h4 class="modal-title">New Bucket-List</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-horizontal" action="/" method="POST">
+									<fieldset>
+										<div class="form-group">
+											<div class="col-md-12">
+												<input type="email" class="form-control" placeholder="Bucket List Name" />
+											</div>
+										</div>                                 
+									</fieldset>
+                            	</form>
+							 </div>
+							 <div class="modal-footer">
+								<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+								<a href="javascript:;" class="btn btn-sm btn-success">Add Bucket-List</a>
+							 </div>
+						   </div>
+						</div>
+					</div>
+					<!-- end of new bucket modal -->
 
 			    <div class="panel-body">
 					<!-- table showing all bucket lists -->
@@ -85,7 +111,53 @@
 						</div>
 						<!-- end of all bucket lists table -->
 
+						<!-- Modal For Editing a bucket list -->
+						<div class="modal fade" id="modal1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h4 class="modal-title">Edit Bucket List</h4>
+									</div>
+									<div class="modal-body">
+										<form class="form-horizontal" action="/" method="POST">
+										<fieldset>
+											<div class="form-group">
+												<div class="col-md-12">
+													<input type="email" class="form-control" placeholder="Bucket List Name" />
+												</div>
+											</div>                                 		
+										</fieldset>
+									</form>
+									</div>
+									<div class="modal-footer">
+										<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+										<a href="javascript:;" class="btn btn-sm btn-success">Edit Bucket List</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End of edit task modal -->
 						
+						<!-- Modal For Removing a bucket list confirmation -->
+						<div class="modal fade" id="modal2">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h4 class="modal-title">Remove Bucket List</h4>
+									</div>
+									<div class="modal-body">
+										<h5>Are you sure to remove this bucket list?
+									</div>
+									<div class="modal-footer">
+										<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+										<a href="javascript:;" class="btn btn-sm btn-success">Remove Bucket</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End of remove bucket list confirmation modal -->
 					</div>
                     <!-- end panel -->
 			        </p>
