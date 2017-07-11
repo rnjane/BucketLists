@@ -183,4 +183,4 @@ def removeitem():
         return redirect(url_for('viewitems'))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
