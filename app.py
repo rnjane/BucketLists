@@ -50,6 +50,9 @@ def register():
     '''register function'''
     form = forms.SignUpForm(request.form)
     if request.method == 'POST':
+        if request.form['password'] != request.form['cpassword']:
+            flash('passwords dont match, try again')
+            return render_template('register.html', form=form)
         if USER.createUser(request.form['username'], \
                            request.form['password']) == 'succes':
             flash('Account succesfully created')
