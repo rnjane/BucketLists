@@ -32,7 +32,7 @@ class UserTest(unittest.TestCase):
         self.assertEqual(unameexists, True)
 
     def test_wrong_password_format(self):
+        '''check if wrong password is entered'''
         user = users.User()
         check = user.createUser([], 'jj')
         self.assertEqual(check, 'wrong data format')
-        

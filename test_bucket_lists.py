@@ -80,7 +80,8 @@ class BucketListItemTest(unittest.TestCase):
         item.create_item('do assignment')
         item.delete_item('do assignment')
         delete_not_working = False
-        if 'do assignment' in bucket_list_item.items.get(bucket_lists.currentbucket[0]):
+        if 'do assignment' in \
+                            bucket_list_item.items.get(bucket_lists.currentbucket[0]):
             delete_not_working = True
         self.assertEqual(delete_not_working, False)
 
