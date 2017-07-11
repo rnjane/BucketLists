@@ -1,8 +1,7 @@
-'''
 
-'''
-from wtforms import BooleanField, \
- StringField, PasswordField, validators, SubmitField, Form, HiddenField
+
+from wtforms import \
+ StringField, PasswordField, validators, SubmitField, Form
 
 
 class LoginForm(Form):
@@ -18,6 +17,10 @@ class SignUpForm(Form):
     '''Signup Form'''
     username = StringField('Username', [validators.Length(min=2, max=25)])
     password = PasswordField('New Password', [
+        validators.DataRequired(),
+        validators.EqualTo('confirm', message='Passwords must match')
+    ])
+    cpassword = PasswordField('New Password', [
         validators.DataRequired(),
         validators.EqualTo('confirm', message='Passwords must match')
     ])
