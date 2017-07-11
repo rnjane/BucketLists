@@ -1,11 +1,12 @@
 
 users = {}
 currentuser = []
+
+
 class User():
     '''This class defines actions related to the users of the app'''
     __username = ''
     __password = ''
-
 
     def createUser(self, username, password):
         '''Method to register users'''
@@ -35,4 +36,5 @@ class User():
                 return 'User does not exist'
 
     def logout(self):
+        '''log out method'''
         currentuser[:] = []
