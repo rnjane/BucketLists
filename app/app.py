@@ -1,12 +1,9 @@
-
 from flask import Flask
-from flask_wtf.csrf import CsrfProtect
-import forms
-import users
-import bucket_lists
-import bucket_list_item
 from flask import render_template, request, redirect, flash, url_for
-
+from models import forms
+from models import bucket_list_item
+from models import bucket_lists
+from models import users
 
 app = Flask(__name__)
 
@@ -183,4 +180,4 @@ def removeitem():
         return redirect(url_for('viewitems'))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

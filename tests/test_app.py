@@ -6,7 +6,7 @@ from app import app
 class ViewTest(unittest.TestCase):
     '''Basic app tests'''
     def setUp(self):
-        self.app = app.test_client()
+        self.app = app.app.test_client()
 
     def test_index_page(self):
         '''Test home page route'''

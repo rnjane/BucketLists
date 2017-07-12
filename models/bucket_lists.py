@@ -1,6 +1,5 @@
+from models import users
 
-
-import users
 curruser = users.currentuser
 buckets = {}
 currentbucket = []
