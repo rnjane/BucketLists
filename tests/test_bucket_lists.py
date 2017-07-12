@@ -1,7 +1,8 @@
-
-
 import unittest
-import bucket_lists, bucket_list_item, users
+
+from models import bucket_lists
+from models import users
+from models import bucket_list_item
 
 
 class BucketListTest(unittest.TestCase):
