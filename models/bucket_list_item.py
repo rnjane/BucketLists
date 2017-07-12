@@ -1,4 +1,5 @@
-import bucket_lists
+from models import bucket_lists
+
 curritem = bucket_lists.currentbucket
 items = {}
 

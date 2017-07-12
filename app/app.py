@@ -1,10 +1,9 @@
-import bucket_lists
-import users
 from flask import Flask
 from flask import render_template, request, redirect, flash, url_for
-
-import forms
+from models import forms
 from models import bucket_list_item
+from models import bucket_lists
+from models import users
 
 app = Flask(__name__)
 
