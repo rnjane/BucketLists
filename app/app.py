@@ -1,12 +1,10 @@
-
-from flask import Flask
-from flask_wtf.csrf import CsrfProtect
-import forms
-import users
 import bucket_lists
-import bucket_list_item
+import users
+from flask import Flask
 from flask import render_template, request, redirect, flash, url_for
 
+import forms
+from models import bucket_list_item
 
 app = Flask(__name__)
 
