@@ -28,16 +28,31 @@
   * passlib==1.6.5
 
 # Installation
-To run this project, you'll need a working installation of python 3 and pip. Flask should also be installed.
+To run this project, you'll need a working installation of python 3 and pip. You also may need virtualenv.
 
 ## To install the app:
 1. Clone this repository - https://github.com/rnjane/BucketLists
-2. Install requirements - pip install requirements.txt
-3. Run app.py file.
+git clone https://github.com/rnjane/BucketLists
+2. Make a virtual environment for the project.
+virtualenv /path/to/my-project-venv
+3. Activate the virtual environment
+source /path/to/my-project-venv/bin/activate
+4. Install requirements 
+pip install requirements.txt
+5. Navigate to the project root and run the tests.
+pytest test_all.py
+- All tests should be passing.
+6. Navigate to the project root and run the app.py file.
+python app.py
+7. When the application has succesfully run, enter 127.0.0.1:5000 in your browser's address bar, and the application will run. 
+
 
 # Testing
-1. Install pytest extension - pip install pytest
-2. Run test_all.py with pytest.
+1. Install pytest extension.
+pip install pytest
+2. Navigate to the root of the project.
+3. Run test_all.py with pytest.
+pytest test_all.py
 - All tests should be passing.
 
 # How to use the application.
@@ -49,6 +64,3 @@ To run this project, you'll need a working installation of python 3 and pip. Fla
 6. Click edit or delete to edit or delete the respective item.
 7. To go back to all your bucket lists, click on the application title in the top right.
 8. To log out, click on the link labelled logout in the top left corner.
-
-
-
