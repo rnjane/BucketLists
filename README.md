@@ -32,18 +32,18 @@ To run this project, you'll need a working installation of python 3 and pip. You
 
 ## To install the app:
 1. Clone this repository - https://github.com/rnjane/BucketLists
-git clone https://github.com/rnjane/BucketLists
+- git clone https://github.com/rnjane/BucketLists
 2. Make a virtual environment for the project.
-virtualenv /path/to/my-project-venv
+- virtualenv /path/to/my-project-venv
 3. Activate the virtual environment
-source /path/to/my-project-venv/bin/activate
+- source /path/to/my-project-venv/bin/activate
 4. Install requirements 
-pip install requirements.txt
+- pip install requirements.txt
 5. Navigate to the project root and run the tests.
-pytest test_all.py
+- pytest test_all.py
 - All tests should be passing.
 6. Navigate to the project root and run the app.py file.
-python app.py
+- python app.py
 7. When the application has succesfully run, enter 127.0.0.1:5000 in your browser's address bar, and the application will run. 
 
 
