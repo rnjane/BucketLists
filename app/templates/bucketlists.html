@@ -51,7 +51,7 @@
 					<div class="panel-heading-btn">
 						<a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">New Bucket-List</a>
 					</div>
-			        <h2 class="panel-title">My Bucket Lists</h2>
+			        <h2 class="panel-title">Bucket Lists</h2>
 			    </div>
 				
 				<!-- #Add a new Bucket list -->
@@ -60,7 +60,7 @@
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-								<h4 class="modal-title">New Bucket-List</h4>
+								<h4 class="modal-title">Add Bucket-List</h4>
 							</div>
 							<div class="modal-body">
 								<form class="form-horizontal" action="{{ url_for('addbucket') }}" method="POST">
@@ -87,27 +87,27 @@
                         <div class="panel-body">
 							<div class="table-responsive">
 								<table id="data-table" class="table table-striped table-bordered" width="100%">
-								<colgroup>
-									<col span="1" style="width: 10%;">
-									<col span="1" style="width: 70%;">
-                                    <col span="1" style="width: 10%;">
-									<col span="1" style="width: 10%;">
+								<colgroup>									
+									<col span="1" style="width: 55%;">
+									<col span="1" style="width: 15%;">
+                                    <col span="1" style="width: 15%;">
+									<col span="1" style="width: 15%;">
 								</colgroup>
 									<thead>
 										<tr>
-											<th>#</th>
-											<th>Name</th>
-											<th>Edit</th>
-											<th>Delete</th>
+											<th>Bucket Name</th>
+											<th>View Items</th>
+											<th>Edit Bucket</th>
+											<th>Delete Bucket</th>
 										</tr>
 									</thead>
 									<tbody>
 										{% for bucketlist in blists %}
                                             <tr>
-											<td></td>
-											<td><a href="{{ "bucketlists/" + bucketlist + "/items" }}">{{ bucketlist }}</a></td>
-											<td><a href="{{ "bucketlists/" + bucketlist + "/edit" }}">Edit</a></td>
-											<td><a href="{{ "bucketlists/" + bucketlist + "/delete" }}">Delete</a></td>
+											<td>{{ bucketlist }}</td>
+											<td><a href="{{ "bucketlists/" + bucketlist + "/items" }}">View Items</a></td>
+											<td><a href="{{ "bucketlists/" + bucketlist + "/edit" }}">Edit Bucket</a></td>
+											<td><a href="{{ "bucketlists/" + bucketlist + "/delete" }}">Delete Bucket</a></td>
 											</tr>
                                         {% endfor %}
 									</tbody>
